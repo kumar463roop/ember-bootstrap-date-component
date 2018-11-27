@@ -1,6 +1,6 @@
 {
-  "name": "ember-cli-bootstrap-datepicker",
-  "version": "0.6.1",
+  "name": "ember-cli-bootstrap-datepicker1",
+  "version": "0.0.1",
   "description": "Datepicker component for Ember CLI based on bootstrap-datepicker. It is forked from soulim. It doesn't have any external dependency except bootstrap-datepicker, supports popup and inline modes.",
   "keywords": [
     "ember-addon",
@@ -16,7 +16,7 @@
     "doc": "doc",
     "test": "tests"
   },
-  "repository": "https://github.com/kum463roop/ember-cli-bootstrap-datepicker",
+  "repository": "https://github.com/kum463roop/ember-cli-bootstrap-datepicker1",
   "scripts": {
     "build": "ember build",
     "lint:js": "eslint ./*.js addon addon-test-support app config lib server test-support tests",
