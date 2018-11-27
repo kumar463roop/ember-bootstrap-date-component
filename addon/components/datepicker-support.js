@@ -13,6 +13,7 @@ export default Mixin.create({
   language: undefined,
   startDate: undefined,
   endDate: undefined,
+  defaultViewDate: undefined,
   customParser: function(value) {
     return value;
   },
@@ -137,6 +138,11 @@ export default Mixin.create({
       let format = this._toString(this.get('format'));
       this.$().datepicker('format', format);
       this.$().data('datepicker')._process_options({format: format});
+      this._updateDatepicker();
+    });
+
+    this.addObserver('defaultViewDate', function() {
+      this.$().datepicker('setDefaultViewDate', this.get('defaultViewDate'));
       this._updateDatepicker();
     });
   }),
