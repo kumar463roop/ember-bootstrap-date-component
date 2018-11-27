@@ -5,7 +5,7 @@ const mergeTrees = require('broccoli-merge-trees');
 const Funnel = require('broccoli-funnel');
 
 module.exports = {
-  name: 'ember-cli-bootstrap-datepicker1',
+  name: 'ember-bootstrap-date-component',
 
   included: function(app) {
     this._super.included(app);
