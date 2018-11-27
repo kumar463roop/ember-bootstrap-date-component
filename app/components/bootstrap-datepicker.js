@@ -1,3 +1,3 @@
-import BootstrapDatepickerComponent from 'ember-cli-bootstrap-datepicker/components/bootstrap-datepicker';
+import BootstrapDatepickerComponent from 'ember-cli-bootstrap-datepicker1/components/bootstrap-datepicker';
 
 export default BootstrapDatepickerComponent;
