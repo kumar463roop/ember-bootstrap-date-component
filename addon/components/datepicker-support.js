@@ -142,7 +142,8 @@ export default Mixin.create({
     });
 
     this.addObserver('defaultViewDate', function() {
-      this.$().datepicker('setDefaultViewDate', this.get('defaultViewDate'));
+      this.$().datepicker('defaultViewDate', this.get('defaultViewDate'));
+      this.$().data('datepicker')._process_options({defaultViewDate: this.get('defaultViewDate')});
       this._updateDatepicker();
     });
   }),
