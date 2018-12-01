@@ -14,6 +14,7 @@ export default Mixin.create({
   startDate: undefined,
   endDate: undefined,
   defaultViewDate: undefined,
+  setDate: undefined,
   customParser: function(value) {
     return value;
   },
@@ -48,7 +49,8 @@ export default Mixin.create({
         todayHighlight: this.get('todayHighlight'),
         toggleActive: this.get('toggleActive'),
         weekStart: this.get('weekStart'),
-        datesDisabled: this.get('datesDisabled')
+        datesDisabled: this.get('datesDisabled'),
+        setDate: this.get('setDate'),
       }).
       on('changeDate', event => {
         run(() => {
@@ -144,6 +146,12 @@ export default Mixin.create({
     this.addObserver('defaultViewDate', function() {
       this.$().datepicker('defaultViewDate', this.get('defaultViewDate'));
       this.$().data('datepicker')._process_options({defaultViewDate: this.get('defaultViewDate')});
+      this._updateDatepicker();
+    });
+
+    this.addObserver('setDate', function() {
+      this.$().datepicker('setDate', this.get('setDate'));
+      this.$().data('datepicker')._process_options({setDate: this.get('setDate')});
       this._updateDatepicker();
     });
   }),
